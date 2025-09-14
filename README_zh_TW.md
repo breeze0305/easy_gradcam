@@ -29,7 +29,7 @@ pip install build twine setuptools wheel
 
 然後執行以下指令進行編譯與檢查：
 ```bash
-python -m build
+python setup.py sdist bdist_wheel
 twine check dist/*
 ```
 

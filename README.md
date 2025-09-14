@@ -11,7 +11,7 @@ with clear and customizable plots.
 ---
 
 ## Installation
-
+[PyPI Link](https://pypi.org/project/easy-gradcam/)
 ```bash
 pip install easy_gradcam
 ```
@@ -20,7 +20,7 @@ pip install easy_gradcam
 
 If you want to install the latest development version (or install after modifying the code), you can build and install directly from GitHub:
 ```bash
-git clone https://github.com/你的帳號/easy_gradcam.git
+git clone https://github.com/breeze0305/easy_gradcam
 cd easy_gradcam
 ```
 

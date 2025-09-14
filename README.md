@@ -31,7 +31,7 @@ pip install build twine setuptools wheel
 
 Then run the following commands to build and verify:
 ```bash
-python -m build
+python setup.py sdist bdist_wheel
 twine check dist/*
 ```
 

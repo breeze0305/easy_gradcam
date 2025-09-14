@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easy_gradcam"
+version = "0.0.3" 
+description = "GradCAM for torchvision, timm and huggingface model."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "PoYung Chou, YuYung Kao, PoHusn Feng", email = "benfeng99@gmail.com" }]
+keywords = ["easy to use(I hope)", "gradcam"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "seaborn",
+  "opencv-python"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

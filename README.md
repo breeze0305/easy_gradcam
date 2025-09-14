@@ -75,7 +75,7 @@ model = AutoModelForImageClassification.from_pretrained(
 ) # targets: "dinov2.encoder.layer.11"
 
 # Example 4: Your own model
-model = CustomModel(...)
+# model = CustomModel(...)
 
 model.eval()
 ```
@@ -88,7 +88,7 @@ print(model)
 
 ### 3. Prepare an image
 ```python
-img_path = Path("./exp1.jpg")
+img_path = Path("./test_img/test5.jpg")
 # 1. Use OpenCV to read an image (choose one)
 img = cv2.imread(img_path)
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -151,13 +151,18 @@ for i in range(len(heats)):
 
 
 ### Example Output
-- results/exp1-0-dinov2.encoder.layer.11.jpg: heatmap only
-![exp1](https://hackmd.io/_uploads/By8uHLWjeg.jpg)
-- results/exp1-0-dinov2.encoder.layer.11-mix.jpg: heatmap overlay on the input image
-![exp2](https://hackmd.io/_uploads/SkYOBLZiee.jpg)
+- test_img/test5.jpg: original input image
+![input](example_1/test_img/test5.jpg)
+- results/test5-0-conv2.jpg: heatmap only
+![exp1](example_1/results/test5-0-conv2.jpg)
+- results/test5-0-conv2-mix.jpg: heatmap overlay on the input image
+![exp2](example_1/results/test5-0-conv2-mix.jpg)
 
 
 ### Notes
 * Make sure the target layer you pass matches the internal structure of the model.
 * Pretrained models from torchvision, timm, and Hugging Face are supported.
 * Heatmaps are saved as .jpg files in the results/ directory.
+
+### Bugs/Requests
+Please send bug reports and feature requests through [github issue tracker](https://github.com/breeze0305/easy_gradcam/issues).
